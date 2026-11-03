@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#075b5b" />
+    <meta name="description" content="Vos envies pour le voyage familial au Yucatán" />
+    <title>Yucatán — Nos envies de voyage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section id="login-view" class="login-view" aria-labelledby="main-title">
+        <div class="sun" aria-hidden="true"></div>
+        <p class="eyebrow">VOYAGE FAMILIAL · YUCATÁN</p>
+        <h1 id="main-title">Qu’est-ce qui vous fait <em>vraiment</em> envie&nbsp;?</h1>
+        <p class="intro">Cinq petits choix pour imaginer un itinéraire qui nous ressemble. Il n’y a pas de bonne réponse&nbsp;: dites-nous simplement ce qui vous attire.</p>
+        <form id="login-form" class="access-card">
+          <label for="access-code">Votre code personnel</label>
+          <div class="code-row">
+            <input id="access-code" name="code" type="password" autocomplete="current-password" inputmode="text" placeholder="Entrez votre code" required />
+            <button type="submit">Commencer <span aria-hidden="true">→</span></button>
+          </div>
+          <p id="login-error" class="form-note" role="alert"></p>
+        </form>
+        <p class="tiny-note">Vos réponses restent privées et peuvent être modifiées à tout moment.</p>
+      </section>
+
+      <section id="survey-view" class="hidden" aria-live="polite">
+        <header class="survey-header">
+          <div><p class="eyebrow">YUCATÁN · NOS ENVIES</p><h1>À vous de jouer <span id="voter-name"></span></h1></div>
+          <button class="quiet-button" id="logout" type="button">Quitter</button>
+        </header>
+        <p class="survey-intro">Pour chaque univers, choisissez l’intensité de votre envie. Vous pourrez tout changer avant d’enregistrer.</p>
+        <form id="survey-form"></form>
+        <div class="save-bar"><p id="save-status" role="status"></p><button id="save-button" type="button" disabled>Enregistrer mes envies <span aria-hidden="true">✦</span></button></div>
+      </section>
+
+      <section id="results-view" class="hidden" aria-live="polite">
+        <header class="survey-header">
+          <div><p class="eyebrow">YUCATÁN · TABLEAU PRIVÉ</p><h1>Les envies du groupe</h1></div>
+          <button class="quiet-button" id="organizer-logout" type="button">Quitter</button>
+        </header>
+        <p class="survey-intro">Comparatif de Marie-Jo et Tabeth. Les données sont accessibles uniquement avec le code organisateur.</p>
+        <div id="results-content" class="results-content"></div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

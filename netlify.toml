@@ -1,0 +1,18 @@
+[build]
+  publish = "site"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/session"
+  to = "/.netlify/functions/session"
+  status = 200
+
+[[redirects]]
+  from = "/api/responses"
+  to = "/.netlify/functions/responses"
+  status = 200
+
+[[redirects]]
+  from = "/api/results"
+  to = "/.netlify/functions/results"
+  status = 200
